@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat5\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+
+\f0\b\fs26 \cf0 1. Write a JavaScript program to swap two halves of an array of integers having even length. If length of input array is not even, should console an error and avoid \
+swapping.\
+ Example:\
+ swap([1,2,3,4,5,6]);\
+ Output: [4,5,6,1,2,3]\
+ swap([1,2,3,4,5,6,7]);\
+ Output: Error\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+
+\f1\b0 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+var arr = [1,2,3,4,5,6,7];\
+    if (((arr.length)%2)!=0)\
+    \{\
+        console.log("error");\
+    \}\
+    else\
+    \{\
+       tem1=arr.slice(0,3);\
+       tem2=arr.slice(3);\
+       arr2 =tem2.concat(tem1);\
+       console.log(arr2);\
+    \}\
+\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+
+\f0\b \cf0 2. Write a JavaScript program for add, subtract, divide, multiply. It should have one function with 3 arguments (2 numbers and 1 string for operation). Use switch case, and log one output for each of 4 operations.\
+ Example:\
+ calculator(1, 2, \'92+\'92)\
+ Output: Addition of 1 & 2 is 3\
+ calculator(5, 4, \'92-\'92)\
+ Output: Subtraction of 5 & 4 is 1
+\f1\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\
+function Calculator(p,q,expo)\{\
+    let res=0;\
+    console.log("Answer-" + expo);\
+    switch(expo)\{\
+        case "+":\
+            res = p+q;\
+        break;\
+        \
+        case "-":\
+            res = p-q;\
+        break;\
+        \
+        case "/":\
+            res = p/q;\
+        break;\
+        \
+        case "*":\
+            res = p*q;\
+        break;\
+    \}\
+    console.log(res);\
+\}\
+\
+Calculator(100,65,"*");\
+\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+
+\f0\b \cf0 3. Write a JavaScript program to find the maximum difference between any two adjacent elements of a given array of integers. Minimum 5 elements in array.\
+ Example: [1,2,3,9, 10].\
+ Output: 6\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0 \cf0 let arr = [45,99,90,46,10];\
+let diff = arr[1]-arr[0];\
+for(let i=arr.length -1; i>0; i--)\{\
+    if(arr[i] - arr[i-1] > diff)\{\
+        diff = arr[i] - arr[i-1] ;\
+    \}\
+\}\
+console.log(Math.abs(diff));\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf0 4. Write a JavaScript program with a function which has input argument as an object. Console it\'92s keys, values and length of object keys
+\f1\b0 .\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 var Student = \{name: \'93Sravya\'94, rollno : 207\};\
+let keys = Object.keys(Student);\
+let values = Object.values(Student);\
+let length=Object.keys(Student).length;\
+console.log(keys);\
+console.log(values); \
+console.log(length);\
+\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	0.	}
+\f0\b Write a JavaScript function which displays a prompt on the window and take age as an input. Based on the age, it should console the output with proper message whether the person is eligible for voting or not. (Criteria: 18+ age)  \
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+\cf0  \
+Example: Age: 25 \
+Output: Congratulations! You are eligible for voting.\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+
+\f1\b0 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 age = prompt("Enter your age= ");\
+if (age>=18)\{\
+    console.log("Congratulations! You are eligible for voting");\
+\}\
+else\{\
+    console.log("You are not eligible for voting");\
+\}   \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf0 6.Write a JavaScript program to demonstrate the use of Callback function.
+\f1\b0 \
+\
+function Function(input, callback)\{\
+    console.log("Hello "+input);\
+    callback();\
+\}\
+function callback()\{\
+    console.log("Callback function");\
+\}\
+\
+Function("Sravya", callback)\
+\
+
+\f0\b 7. Write a JavaScript program which has a function that accepts 2 number arrays as arguments and check if all the elements are same or not.\
+\pard\pardeftab560\slleading20\qc\partightenfactor0
+\cf0  Example: [1,2,3,4,5] & [5,4,1,2,3]\
+ Output: Same\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0 \cf0 \
+function checkArray(array1, array2)\{\
+    if(array1.length == array2.length)\{\
+        let counter = 0;\
+        for(let i=0; i<array1.length ; i++)\{\
+            for(let j=0; j<array2.length; j++)\{\
+                if(array1[i] == array2[j])\{\
+                    counter++;\
+                    break;\
+                \}\
+            \}\
+        \}\
+        if(counter == array1.length)\
+            console.log("same");\
+        else\
+        console.log("Not Same");\
+    \}\
+    else\
+        console.log("Not Same");\
+\}\
+\
+\
+checkArray([1,2,3,4,5], [5,4,1,2,3]); }
